@@ -26,7 +26,6 @@ problem4Solutions =
 problem17Solutions :: [(String, Integer)]
 problem17Solutions =
     [ ("Problem17.solve", Problem17.solve 1 1000)
-    , ("Problem17.solveBack", Problem17.solveBack 1 1000)
     , ("Problem17.solveRecursive", Problem17.solveRecursive 1 1000)
     , ("Problem17.solveTailrec", Problem17.solveTailrec 1 1000)
     , ("Problem17.solveModular", Problem17.solveModular 1 1000)
