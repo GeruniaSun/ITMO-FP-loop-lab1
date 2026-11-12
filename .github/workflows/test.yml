@@ -1,0 +1,38 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Set up Stack
+        uses: haskell-actions/setup@v2
+        with:
+          enable-stack: true
+          stack-version: "3.11.1"
+          stack-no-global: true
+
+      - name: Set up HLint
+        uses: haskell-actions/hlint-setup@v2
+        with:
+          version: "3.6.1"
+
+      - name: Lint Haskell files
+        uses: haskell-actions/hlint-run@v2
+        with:
+          path: '["src/", "app/", "test/"]'
+          fail-on: warning
+
+      - name: Check formatting
+        uses: haskell-actions/run-fourmolu@v12
+        with:
+          version: "0.14.0.0"
+          extra-args: "--no-cabal"
+
+      - name: Run solution tests
+        run: stack test
