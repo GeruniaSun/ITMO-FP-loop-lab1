@@ -21,7 +21,6 @@ main = do
         , ("Problem17.solveMap", Problem17.solveMap 1 1000)
         , ("Problem17.solveComprehension", Problem17.solveComprehension 1 1000)
         , ("Problem17.solve", Problem17.solve 1 1000)
-        , ("Problem17.solveBack", Problem17.solveBack 1 1000)
         , ("Problem17.solveInf", Problem17.solveInf 1 1000)
         ]
 
