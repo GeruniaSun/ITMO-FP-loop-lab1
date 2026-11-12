@@ -1,4 +1,6 @@
+.stack-work/
 dist-newstyle/
+lab1.cabal
 .ghc.environment.*
 *.hi
 *.o
